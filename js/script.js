@@ -1,4 +1,4 @@
-import {msgInfo, msgPrimary, msgSuccess, msgWarning, msgDanger, showAlert, hideAlert, fnc, CLS} from './module.js'
+import {msgInfo, msgPrimary, msgSuccess, msgWarning, msgDanger, showAlert, hideAlert, fnc, CLS, fi_fullscreen} from './module.js'
 // msgSuccess("AVVISO", "MSG");
 // fnc.msg_success("TITLE", "File script");
 // const classi = new CLS;
@@ -9,6 +9,8 @@ const classe = new CLS;
 let fi_alert_close = document.querySelector('.fi-alert-close');
 let fi_panel_footer = document.querySelector('.fi-panel-footer');
 let fi_btn_all = document.querySelectorAll('.fi-btn');
+let fi_bg = document.querySelectorAll('.bg');
+let fi_zoom_image = document.querySelector('.fi-zoom-image');
 // ./recupero gli elementi dal DOM
 /*
 function printer() {
@@ -60,3 +62,53 @@ fi_btn_all[4].addEventListener('click', function() {
 fi_alert_close.addEventListener('click', (e) => {
     hideAlert()
 });
+function zoomImage(index) {
+    'use strict'
+    try {
+        for(var d=0; d<fi_bg.length; d++) {
+            if(d == index) {
+                fi_fullscreen.style.setProperty('display', 'block');
+                var bg_data_id1 = fi_bg[index].getAttribute('data-id1');
+                fi_zoom_image.style.setProperty('display', 'block');
+                fi_zoom_image.style.setProperty('background-image', `url(${bg_data_id1})`);
+                fi_zoom_image.style.setProperty('background-repeat', 'no-repeat');
+                fi_zoom_image.style.setProperty('background-position', 'center center');
+                fi_zoom_image.style.setProperty('background-size', '100% 100%');
+            }
+        }
+    } catch(err) {
+        showAlert("WARNING", `${err.message}`, 'var(--warning)', 'warning');
+    }
+}// ./zoomImage()
+
+fi_bg[0].addEventListener('click', function() {
+    zoomImage(0);
+})// ./bg[0]()
+fi_bg[1].addEventListener('click', function() {
+    zoomImage(1);
+})// ./bg[1]()
+fi_bg[2].addEventListener('click', function() {
+    zoomImage(2);
+})// ./bg[2]()
+fi_bg[3].addEventListener('click', function() {
+    zoomImage(3);
+})// ./bg[3]()
+fi_bg[4].addEventListener('click', function() {
+    zoomImage(4);
+})// ./bg[4]()
+fi_bg[5].addEventListener('click', function() {
+    zoomImage(5);
+})// ./bg[5]()
+
+/*
+for(var fibg=0; fibg<fi_bg.length; fibg++) {
+    fi_bg[fibg].addEventListener('click', function() {
+        zoomImage(fibg);
+        console.info(fibg);
+    })// ./bg[fibg]()
+}// ./for
+*/
+fi_zoom_image.addEventListener('click', function() {
+    this.style.setProperty('display', 'none');
+    fi_fullscreen.style.setProperty('display', 'none');
+});// ./fi_zoom_image()

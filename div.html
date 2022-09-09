@@ -108,7 +108,7 @@
                 border-radius: 0 0 4px 4px;
                 z-index: 1;
             }
-            .fi-wrapper .fi-panel-body button {
+            .fi-wrapper .fi-panel-body-content .cls button {
                 background-color: transparent;
                 background-color: var(--floralwhite);
                 border: 1px solid var(--dark);
@@ -144,10 +144,52 @@
             }
             .cls {
                 border: 1px solid var(--dark);
-                height: 20vh;
+                height: 200px;
                 border-radius: 4px;
                 padding: 4px;
                 color: var(--darkorchid);
+            }
+            .fi-wrapper .fi-panel-body-content .cls button {
+                margin-left: 80%;
+                margin-top: 60%;
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100% !important;
+                height: 100% !important;
+                cursor: zoom-in;
+                box-shadow: 0 3px 9px var(--dark);
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg0 {
+                background-image: url('images/bg/bg0.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg1 {
+                background-image: url('images/bg/bg1.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg2 {
+                background-image: url('images/bg/bg2.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg3 {
+                background-image: url('images/bg/bg3.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg4 {
+                background-image: url('images/bg/bg4.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg5 {
+                background-image: url('images/bg/bg5.jpg');
+            }
+            .fi-zoom-image {
+                position: absolute; left: 10%; top: 10%;
+                width: 80%;
+                height: 80%;
+                background-color: transparent;
+                border: 1px solid var(--dark);
+                border-radius: 4px;
+                z-index: 103;
+                cursor: zoom-out;
+                display: none;
             }
             @keyframes rotation {
                 0% {transform: rotate(0deg)}
@@ -200,14 +242,14 @@
                     height: 25vh;
                 }
                 .fi-alert {
-                    width: 80%;
-                    height: 50%;
-                }
-                .fi-alert-header {
+                    width: 60%;
                     height: 30%;
                 }
+                .fi-alert-header {
+                    height: 60%;
+                }
                 .fi-alert-body {
-                    position: absolute; top: 30%;
+                    position: absolute; top: 40%;
                     height: 70%;
                 }
             }
@@ -219,6 +261,10 @@
                 .fi-alert {
                     width: 80%;
                     height: 20%;
+                }
+                .fi-wrapper .fi-panel-body-content .cls button {
+                    margin-left: 30%;
+                    margin-top: 60%;
                 }
                 .fi-wrapper .fi-panel-footer {
                     height: 11vh;
@@ -235,6 +281,7 @@
             <div class="fi-alert-header"></div>
             <div class="fi-alert-body"></div>
         </div>
+        <div class="fi-zoom-image"></div>
         <div class="fi-wrapper">
         <div class="fi-panel-header"><h1>Div | Position</h1></div>
         <div class="fi-panel-body">
@@ -271,9 +318,44 @@
                 </div>
                 <!-- row-2 -->
                 <div class="cls">
-                    <div class="text">Qui visualizzi l'attributo del tasto premuto</div>
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg0" data-id1 = "images/bg/bg0.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg1" data-id1 = "images/bg/bg1.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg2" data-id1 = "images/bg/bg2.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg3" data-id1 = "images/bg/bg3.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg4" data-id1 = "images/bg/bg4.jpg"></div>
+                    </div>
                 </div>
                 <!-- ./row-2 -->
+                <!-- row-3 -->
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg5" data-id1 = "images/bg/bg5.jpg"></div>
+                    </div>
+                </div>
+                <!-- ./row-3 -->
             </div><!-- ./fi-panel-body-content -->
         </div><!-- ./fi-panel-body -->
         <div class="fi-panel-footer"></div><!-- ./fi-footer -->

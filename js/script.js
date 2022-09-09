@@ -99,7 +99,24 @@ fi_bg[4].addEventListener('click', function() {
 fi_bg[5].addEventListener('click', function() {
     zoomImage(5);
 })// ./bg[5]()
-
+fi_bg[6].addEventListener('click', function() {
+    zoomImage(6);
+})// ./bg[6]()
+fi_bg[7].addEventListener('click', function() {
+    zoomImage(7);
+})// ./bg[7]()
+fi_bg[8].addEventListener('click', function() {
+    zoomImage(8);
+})// ./bg[8]()
+fi_bg[9].addEventListener('click', function() {
+    zoomImage(9);
+})// ./bg[9]()
+fi_bg[10].addEventListener('click', function() {
+    zoomImage(10);
+})// ./bg[10]()
+fi_bg[11].addEventListener('click', function() {
+    zoomImage(11);
+})// ./bg[11]()
 /*
 for(var fibg=0; fibg<fi_bg.length; fibg++) {
     fi_bg[fibg].addEventListener('click', function() {

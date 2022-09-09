@@ -80,7 +80,7 @@ function zoomImage(index) {
         showAlert("WARNING", `${err.message}`, 'var(--warning)', 'warning');
     }
 }// ./zoomImage()
-
+/*
 fi_bg[0].addEventListener('click', function() {
     zoomImage(0);
 })// ./bg[0]()
@@ -117,14 +117,25 @@ fi_bg[10].addEventListener('click', function() {
 fi_bg[11].addEventListener('click', function() {
     zoomImage(11);
 })// ./bg[11]()
-/*
-for(var fibg=0; fibg<fi_bg.length; fibg++) {
-    fi_bg[fibg].addEventListener('click', function() {
-        zoomImage(fibg);
-        console.info(fibg);
-    })// ./bg[fibg]()
-}// ./for
+fi_bg[12].addEventListener('click', function() {
+    zoomImage(12);
+})// ./bg[12]()
+fi_bg[13].addEventListener('click', function() {
+    zoomImage(13);
+})// ./bg[13]()
+fi_bg[14].addEventListener('click', function() {
+    zoomImage(14);
+})// ./bg[14]()
 */
+for(var fibg=0; fibg<fi_bg.length; fibg++) {
+    const current = fi_bg.length-fibg-1;
+    //console.info(current);
+    fi_bg[current].addEventListener('click', function() {
+      zoomImage(current);
+    });
+    
+}// ./for
+
 fi_zoom_image.addEventListener('click', function() {
     this.style.setProperty('display', 'none');
     fi_fullscreen.style.setProperty('display', 'none');

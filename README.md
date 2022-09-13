@@ -1,4 +1,4 @@
-# Impaginazione dom
+# Impaginazione DOM
 Posizionare gli elementi e visualizzare i messaggi sul dom. Responsive
 ## INIZIO
   Scarica e modifica oppure studia il sistema su come posizionare gli elementi sul dom.
